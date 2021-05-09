@@ -1,0 +1,48 @@
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+router-outlet + *  {
+  padding: 0px;
+}
+
+.movie-name {
+  color: black;
+  font-weight: 500 !important;
+}
+
+app-top-bar {
+  width: 100vw;
+  height: 50px;
+  background-color: #4150b4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vh;
+  color: white;
+  font-size: 20px;
+}
+
+bottom-nav-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

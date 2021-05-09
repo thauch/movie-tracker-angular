@@ -1,0 +1,19 @@
+<app-top-bar [pageName]="'Browse'"></app-top-bar>
+<mat-list>
+<div *ngFor="let movie of movies">
+  <mat-list-item>
+  <div mat-line class="movie-name">
+      {{ movie.name }}
+  </div>
+  <div mat-line *ngIf="movie.runtime">
+    {{ movie.rating }} | {{ movie.runtime}}
+  </div>
+</mat-list-item>
+  <!-- <button (click)="share()">
+    Share
+  </button> -->
+
+  <!-- <app-product-alerts [movie]="movie" (notify)="onNotify()">
+  </app-product-alerts> -->
+</div>
+</mat-list>

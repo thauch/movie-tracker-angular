@@ -1,0 +1,19 @@
+
+<div *ngIf="list">
+  <app-top-bar [pageName]="list.name"></app-top-bar>
+  <mat-list>
+    <div *ngIf="movies.length > 0; else elseBlock">
+        <div *ngFor="let movie of movies">
+        <mat-list-item>
+          <div mat-line class="movie-name">
+              {{ movie.name }}
+          </div>
+          <div mat-line *ngIf="movie.runtime">
+            {{ movie.rating }} | {{ movie.runtime}}
+          </div>
+        </mat-list-item>
+      </div>
+  </div>
+  <ng-template #elseBlock><mat-list-item>There are no movies in this list.</mat-list-item></ng-template>
+  </mat-list>
+</div>

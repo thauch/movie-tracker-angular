@@ -1,0 +1,13 @@
+<app-top-bar [pageName]="'Lists'"></app-top-bar>
+<mat-list>
+<div *ngFor="let list of lists">
+  <mat-list-item>
+    <a class="movie-name"
+      [title]="list.name + ' details'"
+      [routerLink]="['/lists',list.id]"
+    >
+      {{ list.name }}
+    </a>
+  </mat-list-item>
+</div>
+</mat-list>
